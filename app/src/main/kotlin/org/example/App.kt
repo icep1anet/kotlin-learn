@@ -12,4 +12,40 @@ class App {
 
 fun main() {
     println(App().greeting)
+    var fish = 2
+    fish = fish + 71 + 233 - 13
+    println(fish)
+    var aquarium = fish / 30
+    val rest = fish % 30
+    if (rest > 0) {
+        aquarium += 1
+    }
+    println(aquarium)
+
+    var rainbowColor = "red"
+    rainbowColor = "blue"
+    val blackColor = "black"
+    // blackColor = "white" // Error
+
+    var greenColor = null
+    var blueColor: Int? = null
+
+    // var list: List, = listOf(null, null)
+    // var list2:List,? = null
+
+    var nullTest: Int? = null
+    println(nullTest?.inc() ?:0)
+
+    val trout = "trout"
+    var haddock = "haddock"
+    var snapper = "snapper"
+    println("I like to eat $trout and $snapper, but not a big fan of $haddock.")
+
+    val fishName = "trout"
+    when(fishName.length){
+        0 -> println("Fish name cannot be empty")
+        in 3..12 -> println("Good fish name")
+        else -> println("OK fish name")
+    }
+    for (i in 0..100 step 7) println(i.toString() + " - ")
 }
